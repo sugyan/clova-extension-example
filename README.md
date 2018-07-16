@@ -1,7 +1,7 @@
-# go-appengine-sample
+# example
 
 ```
 gcloud app create
-goapp deploy -application ${PROJECT_ID} -version ${VERSION_ID} .
+goapp deploy -application ${PROJECT_ID} -version ${VERSION_ID} app
 gcloud app browse
 ```
