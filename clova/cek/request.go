@@ -33,6 +33,17 @@ const (
 	SizeCustom Size = "custom"
 )
 
+// RequestType type
+type RequestType string
+
+// RequestType constants
+const (
+	RequestTypeEvent        RequestType = "EventRequest"
+	RequestTypeIntent       RequestType = "IntentRequest"
+	RequestTypeLaunch       RequestType = "LaunchRequest"
+	RequestTypeSessionEnded RequestType = "SessionEndedRequest"
+)
+
 // RequestMessage type
 type RequestMessage struct {
 	Context *Context `json:"context"`
@@ -95,6 +106,8 @@ type User struct {
 
 // Request type
 type Request struct {
+	Type   RequestType `json:"type"`
+	Intent interface{} `json:"intent"`
 }
 
 // Session type
